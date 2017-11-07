@@ -70,10 +70,10 @@ module.exports = {
         }),
         new MinifyPlugin({}),
         new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            'window.jQuery': 'jquery',
-            Popper: ['popper.js', 'default']
+            $: 'jquery/dist/jquery.slim.js',
+            jQuery: 'jquery/dist/jquery.slim.js',
+            'window.jQuery': 'jquery/dist/jquery.slim.js',
+            Popper: 'popper.js/dist/umd/popper'
         })
     ]
 }
