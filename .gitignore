@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
-*.lock.json
+*lock.json
 # Logs
 logs
 *.log
