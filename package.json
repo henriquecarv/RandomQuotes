@@ -2,12 +2,14 @@
   "name": "randomquotes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "check-modules": "if [ ! -d 'node_modules/' ]; then npm i; fi",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "build": "rm -rf dist/ index.html && webpack",
-    "watch": "webpack --watch"
+    "build": "npm run check-modules && rm -rf dist/ index.html && webpack",
+    "watch": "npm run check-modules && webpack --watch",
+    "prestart": "npm run check-modules"
   },
   "browserslist": [
     "last 2 versions"
