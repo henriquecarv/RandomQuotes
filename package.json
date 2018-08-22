@@ -23,7 +23,7 @@
 	},
 	"homepage": "https://github.com/henriquecarv/randomquotes#readme",
 	"devDependencies": {
-		"autoprefixer": "^9.1.2",
+		"autoprefixer": "^9.1.3",
 		"babel-core": "^6.26.3",
 		"babel-loader": "^7.1.5",
 		"babel-minify-webpack-plugin": "^0.3.1",
