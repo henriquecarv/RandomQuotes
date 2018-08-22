@@ -1,5 +1,7 @@
 # Random Quote Machine
 
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=henriquecarv/randomquotes)](https://dependabot.com)
+
 ## Objective
 Build an app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
 
