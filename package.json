@@ -15,9 +15,12 @@
 		"type": "git",
 		"url": "git+https://github.com/henriquecarv/randomquotes.git"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"randomquotes",
+		"freecodecamp"
+	],
+	"author": "Henrique Carvalho da Cruz <henriquecarv.cruz@gmail.com> (https://henriquecarv.com)",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/henriquecarv/randomquotes/issues"
 	},
