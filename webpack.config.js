@@ -1,8 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -10,11 +9,43 @@ module.exports = {
 	entry: ['./assets/js/main.js', './assets/sass/style.scss'],
 	output: {
 		filename: './dist/js/bundle.js',
-		path: path.join(__dirname, './'),
+		path: path.resolve(__dirname, './'),
 	},
-	devServer: {
-		contentBase: './build',
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				cache: true,
+				parallel: true,
+				sourceMap: true, // set to true if you want JS source maps
+				uglifyOptions: {
+					output: {
+						comments: false,
+					},
+				},
+			}),
+			new OptimizeCSSAssetsPlugin({
+				cssProcessorOptions: {discardComments: {removeAll: true}},
+				canPrint: true,
+			}),
+		],
 	},
+	plugins: [
+		new HtmlWebPackPlugin({
+			template: './template/index.html',
+			filename: './index.html',
+		}),
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: './dist/css/style.css',
+		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery/dist/jquery.slim.js',
+			jQuery: 'jquery/dist/jquery.slim.js',
+			'window.jQuery': 'jquery/dist/jquery.slim.js',
+			Popper: 'popper.js/dist/umd/popper',
+		}),
+	],
 	module: {
 		rules: [
 			{
@@ -30,22 +61,12 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
-					use: [
-						{
-							loader: 'css-loader',
-							options: {
-								minimize: true,
-							},
-						},
-						{
-							loader: 'postcss-loader',
-						},
-						{
-							loader: 'sass-loader',
-						},
-					],
-				}),
+				use: [
+					{loader: MiniCssExtractPlugin.loader},
+					{loader: 'css-loader', options: {minimize: true}},
+					{loader: 'postcss-loader'},
+					{loader: 'sass-loader'},
+				],
 			},
 			{
 				test: /\.js$/,
@@ -58,31 +79,4 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		new HtmlWebPackPlugin({
-			template: './template/index.html',
-			filename: './index.html',
-		}),
-		new ExtractTextPlugin({
-			filename: './dist/css/style.css',
-		}),
-		new OptimizeCssAssetsPlugin({
-			cssProcessorOptions: {discardComments: {removeAll: true}},
-			canPrint: true,
-		}),
-		new UglifyJSPlugin({
-			uglifyOptions: {
-				output: {
-					comments: false,
-				},
-			},
-		}),
-		new MinifyPlugin({}),
-		new webpack.ProvidePlugin({
-			$: 'jquery/dist/jquery.slim.js',
-			jQuery: 'jquery/dist/jquery.slim.js',
-			'window.jQuery': 'jquery/dist/jquery.slim.js',
-			Popper: 'popper.js/dist/umd/popper',
-		}),
-	],
 };
