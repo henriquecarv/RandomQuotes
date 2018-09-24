@@ -1,11 +1,14 @@
 (function($) {
+	const twitterShareButton = document.getElementById('twitter-share-button');
+
 	const createTwitterButton = text => {
-		const twitterShareButton = document.getElementById('twitter-share-button');
-		twttr.widgets.createShareButton('/', twitterShareButton, {
-			size: 'large',
-			text: text,
-			via: 'henriquecarv',
-			related: 'twitterapi,twitter'
+		twttr.ready(() => {
+			twttr.widgets.createShareButton('/', twitterShareButton, {
+				size: 'large',
+				text: text,
+				via: 'henriquecarv',
+				related: 'twitterapi,twitter',
+			});
 		});
 	};
 
@@ -15,8 +18,8 @@
 		cardBody.classList.add('fade-out');
 		const request = new XMLHttpRequest();
 		request.onreadystatechange = () => {
-			if (request.readyState == 4) {
-				if (request.status == 200) {
+			if (request.readyState === 4) {
+				if (request.status === 200) {
 					const quoteText = document.getElementById('quote');
 					const quoteAuthor = document.getElementById('author');
 					quoteText.innerHTML = request.response.quote;
@@ -42,7 +45,7 @@
 
 	const newQuote = document.getElementById('newQuote');
 	newQuote.addEventListener('click', () => {
-		document.getElementsByClassName('twitter-share-button')[0].remove();
+		twitterShareButton.remove();
 		cardBody.classList.replace('fade-in', 'fade-out');
 		getQuote();
 	});

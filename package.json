@@ -7,7 +7,7 @@
 		"check-modules": "if [ ! -d 'node_modules/' ]; then npm i; fi",
 		"clean-dist": "rm -rf dist/",
 		"prestart": "npm run check-modules",
-		"start": "webpack-dev-server --open",
+		"start": "webpack-dev-server --open --mode=development",
 		"prebuild": "npm run check-modules && npm run clean-dist",
 		"build": "webpack",
 		"prewatch": "npm run check-modules",
