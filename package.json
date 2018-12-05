@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"@babel/cli": "^7.2.0",
 		"@babel/core": "^7.2.0",
-		"@babel/preset-env": "^7.1.6",
+		"@babel/preset-env": "^7.2.0",
 		"autoprefixer": "^9.4.2",
 		"babel-loader": "^8.0.4",
 		"babel-minify-webpack-plugin": "^0.3.1",
