@@ -1,55 +1,55 @@
 {
-	"name": "randomquotes",
-	"version": "1.0.0",
-	"description": "",
-	"private": true,
-	"scripts": {
-		"check-modules": "if [ ! -d 'node_modules/' ]; then npm i; fi",
-		"clean-dist": "rm -rf dist/",
-		"prestart": "npm run check-modules",
-		"start": "webpack-dev-server --open --mode=development",
-		"prebuild": "npm run check-modules && npm run clean-dist",
-		"build": "webpack",
-		"prewatch": "npm run check-modules",
-		"watch": "webpack --watch"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/henriquecarv/randomquotes.git"
-	},
-	"keywords": [
-		"randomquotes",
-		"freecodecamp"
-	],
-	"author": "Henrique Carvalho da Cruz <henriquecarv.cruz@gmail.com> (https://henriquecarv.com)",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/henriquecarv/randomquotes/issues"
-	},
-	"homepage": "https://github.com/henriquecarv/randomquotes#readme",
-	"devDependencies": {
-		"@babel/cli": "^7.2.0",
-		"@babel/core": "^7.2.0",
-		"@babel/preset-env": "^7.2.0",
-		"autoprefixer": "^9.4.2",
-		"babel-loader": "^8.0.4",
-		"babel-minify-webpack-plugin": "^0.3.1",
-		"css-loader": "^2.0.0",
-		"html-loader": "^0.5.5",
-		"html-webpack-plugin": "^3.2.0",
-		"mini-css-extract-plugin": "^0.5.0",
-		"node-sass": "^4.11.0",
-		"optimize-css-assets-webpack-plugin": "^3.2.0",
-		"postcss-loader": "^3.0.0",
-		"sass-loader": "^7.1.0",
-		"uglifyjs-webpack-plugin": "^2.0.1",
-		"webpack": "^4.27.1",
-		"webpack-cli": "^3.1.2",
-		"webpack-dev-server": "^3.1.10"
-	},
-	"dependencies": {
-		"bootstrap": "^4.1.3",
-		"jquery": "^3.3.1",
-		"popper.js": "^1.14.6"
-	}
+  "name": "randomquotes",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "check-modules": "if [ ! -d 'node_modules/' ]; then npm i; fi",
+    "clean-dist": "rm -rf dist/",
+    "prestart": "npm run check-modules",
+    "start": "webpack-dev-server --open --mode=development",
+    "prebuild": "npm run check-modules && npm run clean-dist",
+    "build": "webpack --mode=production",
+    "prewatch": "npm run check-modules",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquecarv/randomquotes.git"
+  },
+  "keywords": [
+    "randomquotes",
+    "freecodecamp"
+  ],
+  "author": "Henrique Carvalho da Cruz <henriquecarv.cruz@gmail.com> (https://henriquecarv.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henriquecarv/randomquotes/issues"
+  },
+  "homepage": "https://github.com/henriquecarv/randomquotes#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "autoprefixer": "^9.4.2",
+    "babel-loader": "^8.0.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  }
 }
