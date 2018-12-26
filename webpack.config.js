@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -45,6 +46,7 @@ module.exports = {
       'window.jQuery': 'jquery/dist/jquery.slim.js',
       Popper: 'popper.js/dist/umd/popper',
     }),
+    new Dotenv(),
   ],
   module: {
     rules: [
