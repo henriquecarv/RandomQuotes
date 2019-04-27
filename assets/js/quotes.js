@@ -5,7 +5,7 @@
 		twttr.ready(() => {
 			twttr.widgets.createShareButton("/", twitterShareButton, {
 				size: "large",
-				text: text,
+				text,
 				via: "henriquecarv",
 				related: "twitterapi,twitter"
 			});
