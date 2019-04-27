@@ -1,2 +1,2 @@
-import 'bootstrap';
-import './quotes';
+import "bootstrap";
+import "./quotes";
