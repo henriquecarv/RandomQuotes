@@ -7,11 +7,12 @@
 		"check-modules": "if [ ! -d 'node_modules/' ]; then npm i; fi",
 		"clean-dist": "rm -rf dist/",
 		"prestart": "npm run check-modules",
-		"start": "webpack-dev-server --open --mode=development",
+		"start": "webpack-dev-server --open --progress --mode=development",
 		"prebuild": "npm run check-modules && npm run clean-dist",
-		"build": "webpack --mode=production",
+		"build": "webpack --progress --mode=production",
 		"prewatch": "npm run check-modules",
-		"watch": "webpack --watch"
+		"watch": "webpack --watch",
+		"lint": "eslint . --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -32,11 +33,13 @@
 		"@babel/core": "^7.4.4",
 		"@babel/plugin-transform-runtime": "^7.4.4",
 		"@babel/preset-env": "^7.4.4",
-		"autoprefixer": "^9.5.1",
 		"babel-loader": "^8.0.5",
 		"babel-minify-webpack-plugin": "^0.3.1",
 		"css-loader": "^2.1.1",
 		"dotenv-webpack": "^1.7.0",
+		"eslint": "^5.16.0",
+		"eslint-config-airbnb-base": "^13.1.0",
+		"eslint-plugin-import": "^2.17.2",
 		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^3.2.0",
 		"mini-css-extract-plugin": "^0.6.0",
@@ -55,6 +58,7 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.4.4",
+		"autoprefixer": "^9.5.1",
 		"bootstrap": "^4.3.1",
 		"jquery": "^3.4.0",
 		"popper.js": "^1.15.0"
