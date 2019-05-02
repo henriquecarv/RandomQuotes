@@ -33,6 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './template/index.html',
+      favIcon: './assets/images/quotes_ico.png',
       filename: './index.html',
     }),
     new MiniCssExtractPlugin({
@@ -50,6 +51,10 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.png$/,
+        loader: 'file-loader',
+      },
       {
         test: /\.html$/,
         use: [
