@@ -49,7 +49,7 @@
 		"optimize-css-assets-webpack-plugin": "^5.0.3",
 		"postcss-loader": "^3.0.0",
 		"prettier": "^1.18.2",
-		"sass-loader": "^7.1.0",
+		"sass-loader": "^7.2.0",
 		"stylelint": "^10.1.0",
 		"stylelint-config-sass-guidelines": "^6.0.0",
 		"stylelint-scss": "^3.8.0",
