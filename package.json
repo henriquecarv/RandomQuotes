@@ -30,7 +30,7 @@
 	"homepage": "https://github.com/henriquecarv/randomquotes#readme",
 	"devDependencies": {
 		"@babel/cli": "^7.6.2",
-		"@babel/core": "^7.6.2",
+		"@babel/core": "^7.6.3",
 		"@babel/plugin-transform-runtime": "^7.6.2",
 		"@babel/preset-env": "^7.6.2",
 		"babel-loader": "^8.0.6",
