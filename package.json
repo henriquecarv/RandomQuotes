@@ -54,7 +54,7 @@
 		"stylelint-config-sass-guidelines": "^6.1.0",
 		"stylelint-scss": "^3.11.1",
 		"uglifyjs-webpack-plugin": "^2.2.0",
-		"webpack": "^4.41.0",
+		"webpack": "^4.41.1",
 		"webpack-cli": "^3.3.9",
 		"webpack-dev-server": "^3.8.1"
 	},
