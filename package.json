@@ -62,7 +62,7 @@
 		"webpack-dev-server": "^3.10.1"
 	},
 	"dependencies": {
-		"@babel/runtime": "^7.7.7",
+		"@babel/runtime": "^7.8.0",
 		"autoprefixer": "^9.7.3",
 		"bootstrap": "^4.4.1",
 		"jquery": "^3.4.1",
