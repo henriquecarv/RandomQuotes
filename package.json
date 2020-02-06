@@ -30,22 +30,22 @@
 	},
 	"homepage": "https://github.com/henriquecarv/randomquotes#readme",
 	"devDependencies": {
-		"@babel/cli": "^7.8.3",
-		"@babel/core": "^7.8.3",
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.8.4",
 		"@babel/plugin-transform-runtime": "^7.8.3",
-		"@babel/preset-env": "^7.8.3",
+		"@babel/preset-env": "^7.8.4",
 		"babel-loader": "^8.0.6",
 		"babel-minify-webpack-plugin": "^0.3.1",
 		"css-loader": "^3.4.2",
 		"dotenv-webpack": "^1.7.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb-base": "^14.0.0",
-		"eslint-config-prettier": "^6.9.0",
-		"eslint-plugin-import": "^2.20.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-import": "^2.20.1",
 		"eslint-plugin-prettier": "^3.1.2",
 		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^3.2.0",
-		"husky": "^4.0.10",
+		"husky": "^4.2.1",
 		"mini-css-extract-plugin": "^0.9.0",
 		"node-sass": "^4.13.1",
 		"npm-run-all": "^4.1.5",
@@ -54,18 +54,18 @@
 		"prettier": "^1.19.1",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^13.0.0",
-		"stylelint-config-sass-guidelines": "^6.2.0",
-		"stylelint-scss": "^3.13.0",
+		"stylelint-config-sass-guidelines": "^7.0.0",
+		"stylelint-scss": "^3.14.2",
 		"uglifyjs-webpack-plugin": "^2.2.0",
 		"webpack": "^4.41.5",
 		"webpack-cli": "^3.3.10",
-		"webpack-dev-server": "^3.10.1"
+		"webpack-dev-server": "^3.10.3"
 	},
 	"dependencies": {
-		"@babel/runtime": "^7.8.3",
+		"@babel/runtime": "^7.8.4",
 		"autoprefixer": "^9.7.4",
 		"bootstrap": "^4.4.1",
 		"jquery": "^3.4.1",
-		"popper.js": "^1.16.0"
+		"popper.js": "^1.16.1"
 	}
 }
